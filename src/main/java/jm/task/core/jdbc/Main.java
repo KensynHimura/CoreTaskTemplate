@@ -7,13 +7,13 @@ public class Main {
     public static void main(String[] args){
         UserDaoHibernateImpl userDaoHibernate = new UserDaoHibernateImpl();
         userDaoHibernate.createUsersTable();
-//        userDaoHibernate.saveUser("First", "first", (byte)10);
-//        userDaoHibernate.saveUser("Second", "second", (byte)20);
-//        userDaoHibernate.saveUser("Third", "third", (byte)30);
-//        userDaoHibernate.saveUser("Fourth", "fourth", (byte)40);
+        userDaoHibernate.saveUser("First", "first", (byte)10);
+        userDaoHibernate.saveUser("Second", "second", (byte)20);
+        userDaoHibernate.saveUser("Third", "third", (byte)30);
+        userDaoHibernate.saveUser("Fourth", "fourth", (byte)40);
         userDaoHibernate.getAllUsers();
-//        userDaoHibernate.cleanUsersTable();
-//        userDaoHibernate.dropUsersTable();
+        userDaoHibernate.cleanUsersTable();
+        userDaoHibernate.dropUsersTable();
 ////
 //     UserDaoJDBCImpl userDaoJDBC = new UserDaoJDBCImpl();
 //        userDaoJDBC.createUsersTable();
