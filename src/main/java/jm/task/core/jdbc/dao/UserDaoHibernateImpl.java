@@ -1,10 +1,6 @@
 package jm.task.core.jdbc.dao;
-
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.util.Util;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
@@ -12,9 +8,7 @@ public class UserDaoHibernateImpl implements UserDao {
     Util util = new Util();
 
     public UserDaoHibernateImpl() {
-
     }
-
 
     @Override
     public void createUsersTable() {
@@ -37,8 +31,6 @@ public class UserDaoHibernateImpl implements UserDao {
             e.printStackTrace();
             util.getFactory().getCurrentSession().getTransaction().rollback();
         }
-
-
     }
 
     @Override
@@ -52,7 +44,6 @@ public class UserDaoHibernateImpl implements UserDao {
             e.printStackTrace();
             util.getFactory().getCurrentSession().getTransaction().rollback();
         }
-
     }
 
     @Override
