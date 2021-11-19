@@ -1,10 +1,10 @@
 package jm.task.core.jdbc.model;
-
 import javax.persistence.*;
 
+@Entity
 @Table(name = "minions")
 public class User {
-
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -18,14 +18,12 @@ public class User {
     private Byte age;
 
     public User() {
-
     }
 
     public User(String name, String lastName, Byte age) {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
-
     }
 
     public Long getId() {
@@ -70,4 +68,3 @@ public class User {
                 '}';
     }
 }
-
